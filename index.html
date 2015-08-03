@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html ng-app="app">
-<head>
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body ng-controller="CuteCtrl">
-  <a ng-click="loadPics()">Gimme some pics</a> 
-  <img
-    ng-repeat="src in imageLocations"
-    ng-src="{{ src }}"
-    />
-
-
-  <section>
-    
-  </section>
-
+  <head>
+    <meta charset='utf-8'> 
+    <title>Cute or Not (^o^)</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+  </head>
   
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-<!-- <script src="lib/angular/angular.js"></script> -->
-<script src="app.js"></script>
-</body>
+  <body>
+    <div ng-controller="CuteCtrl">
+      <h1>Cute or not?? ^o^</h1>
+      <p ng-repeat="src in images" >
+        {{src}}: {{counts[$index] || 0}
+        <button ng-click="upVote($index,src)">+1</button>
+      </p>
+    <!-- <ul>
+      <li ng-repeat="src in imageLocations">
+        ng-src="{{ src }}"
+      </li>
+    </ul> -->
+      <p>Total: {{ total }}</p>
+     
+      <p>
+        And the winner is {{max_candidate}} with {{max_percentage()}}% of the votes
+      </p>
+    
+    </div>
+  </body>
+  <!-- <script src="lib/angular/angular.js"></script> -->
+  <script src="app.js"></script>
 </html>
