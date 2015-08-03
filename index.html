@@ -5,7 +5,13 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body ng-controller="CuteCtrl">
-  <img src="http://placekitten.com/g/200/300" height="300" width="400">
+  <a ng-click="loadPics()">Gimme some pics</a> 
+  <img
+    ng-repeat="src in imageLocations"
+    ng-src="{{ src }}"
+    />
+
+
   <section>
     
   </section>
