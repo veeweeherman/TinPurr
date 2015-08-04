@@ -1,34 +1,21 @@
-angular.module('app.controllers', [])
-  .controller('FlickrCtrl', function($scope) {
+angular.module('app.flickr', [])
+  .controller('FlickrCtrl', function($scope, $http) {
 
-  $scope.urlArr = [];
+    $scope.urlArr = [];
 
-  $scope.yqlCallback = function(data) {
-    console.log('this is flickr cat data',data);
-    var photoArr = data.query.results.photo; //array of photos in data object
-    var photo = data.query.results.photo[0];
+    $scope.yqlCallback = function(data) {
+      Flickr.getCats();
+      // .then(function(){
 
-    // var farmId = data.query.results.photo[0].farm;
-    // var serverId = data.query.results.photo[0].server;
-    // var id1 = data.query.results.photo[0].id;
-    // var secret = data.query.results.photo[0].secret;
-
-    for (var i = 0; i < photoArr.length; i++) {
-      // string concat of the url link
-      urlArr.push("https://farm" +
-      photoArr[i].farm +".static.flickr.com/"+
-      photoArr[i].server +"/"+
-      photoArr[i].id +"_"+
-      photoArr[i].secret +".jpg")
+      // })
+      // .catch(function(error){
+      //   console.error(error);
+      // })
     };
-
-    // console.log("https://farm"+farmId+".static.flickr.com/"+serverId+"/"+id1+"_"+secret+".jpg")
-    console.log('urlArr :',urlArr)
-    alert(photo.title);
-  };
-</script>
+      $scope.yqlCallback();
+  })
     
-<script src="https://query.yahooapis.com/v1/public/yql?q=select * from flickr.photos.search where has_geo='true' and tags='funny cats' and api_key='c4f57fcf22dcb4274f71bbacc7550f0c'&format=json&callback=yqlCallback"></script>
+
     
 // <img src="https://farm"+farmId+".static.flickr.com/"+serverId+"/"+id1+"_"+secret+".jpg">
 //     img src doesnt have access to variables inside yqlCallback function -->
@@ -39,5 +26,4 @@ angular.module('app.controllers', [])
 
 
 
-
-})
+    // console.log("https://farm"+farmId+".static.flickr.com/"+serverId+"/"+id1+"_"+secret+".jpg")

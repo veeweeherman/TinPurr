@@ -1,4 +1,4 @@
-angular.module('app.controllers', [])
+angular.module('app.cute', [])
   .controller('CuteCtrl', function($scope) {
     
     $scope.images = [{
@@ -41,8 +41,6 @@ angular.module('app.controllers', [])
       var frac = $scope.maxCount / $scope.total * 100;
       return Math.round(frac * 10) / 10;
     }
+  })
 
-    // $scope.loadPics = function(){
-      //how to load 2 pics from array onto page
-    // }
-  });
+    

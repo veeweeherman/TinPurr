@@ -3,21 +3,15 @@
   <head>
     <meta charset='utf-8'> 
     <title>Cats: Cute or Not (^o^)</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="app.js"></script>
-    <script src="controllers.js"></script>
-    <script src="controllers.js"></script>
   </head>
   
   <body>
-
-
-
-
+    <h1>FLICKR CATS!</h1>
+    <div ng-view></div>
 
     <div ng-controller="CuteCtrl">
-      <h1>Cats!! Cats!! Cats!! Cats!! Cats!!</h1>
+      <h2>Cats!! Cats!! Cats!! Cats!! Cats!!</h2>
       
       <div ng-repeat="src in images | limitTo:quantity" >
         <img ng-src="{{ src.src }}"  >
@@ -37,5 +31,12 @@
     <div>
     </div>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+    <script src="controllers.js"></script>
+    <script src="flickrcontroller.js"></script>
+    <script src="services.js"></script>
+    <script src="app.js"></script>
+  
   </body>
 </html>

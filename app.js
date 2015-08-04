@@ -1,4 +1,22 @@
-angular.module('app', ['app.controllers'])
+angular.module('app', ['app.cute',
+	'app.flickr',
+	'app.services',
+	'ngRoute'
+
+	])
+	.config(function($routeProvider, $httpProvider) {
+		$routeProvider 
+			.when('/cute', {
+				templateUrl: '',
+				controller: ''
+			})
+			.when('flickr', {
+				templateUrl: 'flickr.html',
+				controller: 'FlickrCntrl'
+			})
+			
+		
+	})
 
 		
 		
