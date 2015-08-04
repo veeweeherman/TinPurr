@@ -4,19 +4,19 @@ angular.module('app', ['app.cute',
 	'ngRoute'
 
 	])
-	.config(function($routeProvider, $httpProvider) {
-		$routeProvider 
-			.when('/cute', {
-				templateUrl: '',
-				controller: ''
-			})
-			.when('flickr', {
-				templateUrl: 'flickr.html',
-				controller: 'FlickrCntrl'
-			})
+	// .config(function($routeProvider, $httpProvider) {
+	// 	$routeProvider 
+	// 		.when('/cute', {
+	// 			templateUrl: '',
+	// 			controller: ''
+	// 		})
+	// 		.when('flickr', {
+	// 			templateUrl: 'flickr.html',
+	// 			controller: 'FlickrCntrl'
+	// 		})
 			
 		
-	})
+	// })
 
 		
 		
