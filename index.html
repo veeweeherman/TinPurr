@@ -10,6 +10,22 @@
   </head>
   
   <body>
+    <script>
+      var yqlCallback = function(data) {
+        console.log('this is flickr cat data',data);
+        var photo = data.query.results.photo[0]; //first cat: felix
+        var farmId = data.query.results.photo[0].farm;
+        var serverId = data.query.results.photo[0].server;
+        var id1 = data.query.results.photo[0].id;
+        var secret = data.query.results.photo[0].secret;
+        console.log("https://farm"+farmId+".static.flickr.com/"+serverId+"/"+id1+"_"+secret+".jpg")
+        alert(photo.title);
+      };
+    </script>
+    <script src="https://query.yahooapis.com/v1/public/yql?q=select * from flickr.photos.search where has_geo='true' and tags='funny cats' and api_key='c4f57fcf22dcb4274f71bbacc7550f0c'&format=json&callback=yqlCallback"></script>
+    
+    <img src="https://farm1.static.flickr.com/303/19534647013_385563d7fb.jpg">
+
     <div ng-controller="CuteCtrl">
       <h1>Cats!! Cats!! Cats!! Cats!! Cats!!</h1>
       
@@ -26,6 +42,10 @@
       </p>
     
     </div>
+
+
+    <div>
+    </div>
+
   </body>
-  <!-- <script src="lib/angular/angular.js"></script> -->
 </html>
