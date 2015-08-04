@@ -1,7 +1,5 @@
-angular.module('app', ['app.cute',
-	'app.flickr',
-	'app.services',
-	'ngRoute'
+angular.module('app', ['app.cute'
+
 
 	])
 	// .config(function($routeProvider, $httpProvider) {
