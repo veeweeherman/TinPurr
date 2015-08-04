@@ -10,29 +10,27 @@ angular.module('app.controllers', [])
       }
     ];
 
-
-
     $scope.counts = {};
     $scope.total = 0;
 
-    $scope.max_candidate = "";
-    $scope.max_count = 0;
+    $scope.winner = "";
+    $scope.maxCount = 0;
     
     $scope.upVote = function(x, label){
       if (!$scope.counts.hasOwnProperty(x))
         $scope.counts[x] = 0;
       var count = ++$scope.counts[x];
-      if (count > $scope.max_count) {
-        $scope.max_count = count;
-        $scope.max_candidate = label.title;
+      if (count > $scope.maxCount) {
+        $scope.maxCount = count;
+        $scope.winner = label.title;
       }
       $scope.total++;
     }
 
-    $scope.max_percentage = function() {
-      if ($scope.max_count === 0 || $scope.total === 0)
+    $scope.percent = function() {
+      if ($scope.maxCount === 0 || $scope.total === 0)
         return 0;
-      var frac = $scope.max_count / $scope.total * 100;
+      var frac = $scope.maxCount / $scope.total * 100;
       return Math.round(frac * 10) / 10;
     }
 

@@ -18,15 +18,11 @@
         {{src}}: {{counts[$index] || 0}} >
         <button ng-click="upVote($index,src)">+1</button>
       </div>
-    <!-- <ul>
-      <li ng-repeat="src in imageLocations">
-        ng-src="{{ src }}"
-      </li>
-    </ul> -->
+      
       <p>Total: {{ total }}</p>
      
       <p>
-        And the winner is {{ max_candidate }} with {{max_percentage()}}% of the votes
+        And the winner is {{ winner }} with {{ percent() }}% of the votes
       </p>
     
     </div>
