@@ -11,12 +11,13 @@
   
   <body>
     <div ng-controller="CuteCtrl">
-      <h1>Cats: Cute or not??</h1>
-      <p>
-      <img class="pics" ng-repeat="src in images" ng-src="{{ src.src }}" >
-        {{src}}: {{counts[$index] || 0}
+      <h1>Cats!!</h1>
+      
+      <div ng-repeat="src in images" >
+        <img ng-src="{{ src.src }}" 
+        {{src}}: {{counts[$index] || 0}} >
         <button ng-click="upVote($index,src)">+1</button>
-      </p>
+      </div>
     <!-- <ul>
       <li ng-repeat="src in imageLocations">
         ng-src="{{ src }}"
@@ -25,7 +26,7 @@
       <p>Total: {{ total }}</p>
      
       <p>
-        And the winner is {{max_candidate}} with {{max_percentage()}}% of the votes
+        And the winner is {{ max_candidate }} with {{max_percentage()}}% of the votes
       </p>
     
     </div>
