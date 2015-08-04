@@ -13,7 +13,7 @@
     <div ng-controller="CuteCtrl">
       <h1>Cats!! Cats!! Cats!! Cats!! Cats!!</h1>
       
-      <div ng-repeat="src in images" >
+      <div ng-repeat="src in images | limitTo:quantity" >
         <img ng-src="{{ src.src }}"  >
         <p>{{src.title}}: {{counts[$index] || 0}}</p>
         <button ng-click="upVote($index,src)">+1</button>

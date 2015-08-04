@@ -7,9 +7,17 @@ angular.module('app.controllers', [])
       }, {
         src: 'img/cat2.jpg',
         title: 'Happy Cat'
-      }
+      },
+      {
+        src: 'img/cat3.jpg',
+        title: 'Sassy Cat'
+      },{
+        src: 'img/cat4.jpg',
+        title: 'Lover Cats'
+      },
     ];
 
+    $scope.quantity = 2
     $scope.counts = {};
     $scope.total = 0;
 
