@@ -2,18 +2,18 @@
 <html ng-app="app">
   <head>
     <meta charset='utf-8'> 
-    <title>Cute or Not (^o^)</title>
+    <title>Cats: Cute or Not (^o^)</title>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="app.js"></script>
     <script src="controllers.js"></script>
   </head>
   
   <body>
     <div ng-controller="CuteCtrl">
-      <h1>Cute or not?? ^o^</h1>
+      <h1>Cats: Cute or not??</h1>
       <p>
-      <img ng-repeat="src in images" ng-src="{{ src.src }}" >
+      <img class="pics" ng-repeat="src in images" ng-src="{{ src.src }}" >
         {{src}}: {{counts[$index] || 0}
         <button ng-click="upVote($index,src)">+1</button>
       </p>
