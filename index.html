@@ -15,7 +15,10 @@
   
   <body>
     <h1>FLICKR CATS!</h1>
-    <!-- <div ng-view></div> -->
+    <!-- <div ng-view></div>
+limitTo:quantity |
+orderBy:random
+     -->
 
   <!-- <div ng-controller="FlickrCtrl" >
     <div ng-repeat="img in images">
@@ -26,7 +29,7 @@
     <div ng-controller="CuteCtrl">
       <button ng-click="getCats()">click for cats</button>
       <h2>Cats!! Cats!! Cats!! Cats!! Cats!!</h2>
-      <div ng-repeat="img in urlArr | limitTo:quantity" >
+      <div ng-repeat="img in random(urlArr) | limitTo:quantity" >
         <img ng-src="{{ img }}"  >
         <p>{{img}}: {{counts[$index] || 0}}</p>
         <button ng-click="upVote($index,src)">+1</button>

@@ -2,6 +2,13 @@ angular.module('app.cute', [])
   .controller('CuteCtrl', function($scope, $http) {
     
   
+    $scope.urlArr = [];
+    $scope.random = function shuffle(o){
+      for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), 
+        x = o[--i], o[i] = o[j], o[j] = x);
+      return o;
+      }
+
     $scope.quantity = 2
     $scope.counts = {};
     $scope.total = 0;
@@ -9,7 +16,6 @@ angular.module('app.cute', [])
     $scope.winner = "";
     $scope.maxCount = 0;
 
-    $scope.urlArr = [];
     $scope.getCats = function() {
       
       $http.get("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20flickr.photos.search%20where%20has_geo%3D'true'%20and%20tags%3D'funny%20cats'%20and%20api_key%3D'c4f57fcf22dcb4274f71bbacc7550f0c'%3B&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys")
@@ -25,7 +31,7 @@ angular.module('app.cute', [])
             photoArr[i].id +"_"+
             photoArr[i].secret +".jpg")
           };
-          console.log('urlArr',$scope.urlArr)
+          console.log('urlArr : should be randomized:',$scope.urlArr)
 
         })
         .error(function(err) {
