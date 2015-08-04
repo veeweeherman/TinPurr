@@ -46,7 +46,6 @@ angular.module('app.cute', [])
         $scope.maxCount = count;
         $scope.winner = label;
       }
-          alert(event + 'happened!')
       $scope.total++;
     }
 

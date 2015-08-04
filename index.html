@@ -3,9 +3,10 @@
   <head>
     <meta charset='utf-8'> 
     <title>Cats: Cute or Not (^o^)</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <script src="controllers.js"></script>
     <script src="flickrcontroller.js"></script>
     <script src="services.js"></script>
@@ -15,24 +16,15 @@
   
   <body>
     <h1>FLICKR CATS!</h1>
-    <!-- <div ng-view></div>
-limitTo:quantity |
-orderBy:random
-     -->
 
-  <!-- <div ng-controller="FlickrCtrl" >
-    <div ng-repeat="img in images">
-      <img ng-src="{{img}}">
-    </div>
-  </div>  -->
 
     <div ng-controller="CuteCtrl">
       <button ng-click="getCats($event)">click for cats</button>
       <h2>Cats!! Cats!! Cats!! Cats!! Cats!!</h2>
       <div ng-repeat="img in random(urlArr) | limitTo:quantity" >
-        <img ng-src="{{ img }}"  >
+        <img  class="img-circle" ng-src="{{ img }}"  >
         <p>{{img}}: {{counts[$index] || 0}}</p>
-        <button ng-click="upVote($index,src, $event)">+1</button>
+        <button class="btn btn-large btn-primary" type="button" ng-click="upVote($index,src, $event)">meow</button>
       </div>
       
       <p>Total: {{ total }}</p>
@@ -45,6 +37,7 @@ orderBy:random
 
 
   
-
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
