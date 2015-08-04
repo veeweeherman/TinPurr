@@ -2,11 +2,11 @@ angular.module('app.controllers', [])
   .controller('CuteCtrl', function($scope) {
     
     $scope.images = [{
-        src: 'img/vy1.jpg',
-        title: 'Pic 1'
+        src: 'img/cat1.jpg',
+        title: 'Formal Cat'
       }, {
-        src: 'img/vy5.jpg',
-        title: 'Pic 2'
+        src: 'img/cat2.jpg',
+        title: 'Happy Cat'
       }
     ];
 
