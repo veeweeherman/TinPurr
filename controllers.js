@@ -17,7 +17,7 @@ angular.module('app.controllers', [])
       },
     ];
 
-    $scope.quantity = 2
+    $scope.quantity = Math.floor(Math.random() * $scope.images.length) +1//random number between 1 and the number of images in the array
     $scope.counts = {};
     $scope.total = 0;
 
