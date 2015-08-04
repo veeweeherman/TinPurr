@@ -42,7 +42,7 @@ angular.module('app.controllers', [])
       return Math.round(frac * 10) / 10;
     }
 
-    $scope.loadPics = function(){
+    // $scope.loadPics = function(){
       //how to load 2 pics from array onto page
-    }
+    // }
   });
