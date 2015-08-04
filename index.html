@@ -27,7 +27,7 @@ orderBy:random
   </div>  -->
 
     <div ng-controller="CuteCtrl">
-      <button ng-click="getCats()">click for cats</button>
+      <button ng-click="getCats($event)">click for cats</button>
       <h2>Cats!! Cats!! Cats!! Cats!! Cats!!</h2>
       <div ng-repeat="img in random(urlArr) | limitTo:quantity" >
         <img ng-src="{{ img }}"  >
