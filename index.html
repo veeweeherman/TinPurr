@@ -32,7 +32,7 @@ orderBy:random
       <div ng-repeat="img in random(urlArr) | limitTo:quantity" >
         <img ng-src="{{ img }}"  >
         <p>{{img}}: {{counts[$index] || 0}}</p>
-        <button ng-click="upVote($index,src)">+1</button>
+        <button ng-click="upVote($index,src, $event)">+1</button>
       </div>
       
       <p>Total: {{ total }}</p>
