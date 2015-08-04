@@ -1,19 +1,19 @@
 angular.module('app.controllers', [])
   .controller('CuteCtrl', function($scope) {
-    // $scope.images = [{
-    //    src: '/img/vy1.jpg',
-    //     title: 'Pic 1'
-    //   }, {
-    //     src: '/img/vy5.jpg',
-    //     title: 'Pic 2'
-    //   }
-    // ];
+    $scope.images = [{
+       src: 'img/vy1.jpg',
+        title: 'Pic 1'
+      }, {
+        src: 'img/vy5.jpg',
+        title: 'Pic 2'
+      }
+    ];
 
     // for mvp reasons lets just use strings first...
-    $scope.images = [
-      'string1',
-      'string2'
-    ];
+    // $scope.images = [
+    //   'string1',
+    //   'string2'
+    // ];
 
     $scope.counts = {};
     $scope.total = 0;

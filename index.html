@@ -12,7 +12,8 @@
   <body>
     <div ng-controller="CuteCtrl">
       <h1>Cute or not?? ^o^</h1>
-      <p ng-repeat="src in images" >
+      <p>
+      <img ng-repeat="src in images" ng-src="{{ src.src }}" >
         {{src}}: {{counts[$index] || 0}
         <button ng-click="upVote($index,src)">+1</button>
       </p>
