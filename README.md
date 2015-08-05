@@ -1,10 +1,7 @@
-Using AngularJS, creating an app where users can vote on 1 of 2 pictures for which cat in which photo is cuter.
 
-Steps:
-*from a cat photo hosting website, display 2 photos side by side
+  > Tinpurr: Finding your soulmate, via your inner-cat-lady 
 
-*give each photo their own count, display a way for users to vote on only ONE photo
+  > Quench your thirst of cat lovin'. Vote on the cutest cat in town. (Future features: upload pics of your own cat and watch your cat's popularity grow)
 
-*store the count value and display on page; 
+  > Using the Yahoo Developer Network Flickr API and AngularJS, you are given two cats and you vote on which is cuter. The total vote count and current winner is updated in real time.
 
-*when one vote has been submitted, a new set of 2 photos will diaply and another vote can be made on the new photos
