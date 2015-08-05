@@ -42,7 +42,7 @@ angular.module('app.cute', [])
         console.log('ERROR: ', err);
       })
     }
-    
+    $scope.getCats();
     $scope.upVote = function(x, label, event){
       if (!$scope.counts.hasOwnProperty(x))
         $scope.counts[x] = 0;

@@ -14,12 +14,12 @@
   
   </head>
   
-  <body>
+  <body >
     <h1>FLICKR CATS!</h1>
 
 
     <div ng-controller="CuteCtrl">
-      <button class="btn btn-large btn-info" type="button" ng-click="getCats($event)">click for cats</button>
+      <button class="btn btn-large btn-info" type="button" ng-click="getCats($event)">meow</button>
       <h2>Cats!! Cats!! Cats!! Cats!! Cats!!</h2>
       <div ng-repeat="img in random(urlArr) | limitTo:quantity" >
         <img  class="img-circle" ng-src="{{ img.url }}"  >

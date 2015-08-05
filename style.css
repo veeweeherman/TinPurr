@@ -1,15 +1,13 @@
 /*body {
 	text-align: center;
-	background-image: url("http://s3.favim.com/orig/45/bite-blackampwhite-cat-cats-love-Favim.com-401192.jpg");
-	font-family: 'Helvetica';
+	background-color: #ADC2EB;
 
 }
 
-h1 {
-	color: red;
-}*/
+
 
 img {
+	position: center;
 	display: block;
 	width: 25%;
-}
+}*/
