@@ -24,14 +24,19 @@ angular.module('app.cute', [])
             
             var photoArr = data.query.results.photo
             for (var i = 0; i < photoArr.length; i++) {
+            var newObj = {};
             // string concat of the url link
-            $scope.urlArr.push("https://farm" +
+            newObj['title'] = photoArr[i].title
+            newObj['url'] = "https://farm" +
             photoArr[i].farm +".static.flickr.com/"+
             photoArr[i].server +"/"+
             photoArr[i].id +"_"+
-            photoArr[i].secret +".jpg")
+            photoArr[i].secret +".jpg"
+            $scope.urlArr.push(newObj);
           };
-          console.log('urlArr : should be randomized:',$scope.urlArr)
+          console.log('urlObj :',$scope.urlObj)
+          console.log('$scope.urlArr :',$scope.urlArr)
+
         })
         .error(function(err) {
         console.log('ERROR: ', err);
@@ -44,7 +49,7 @@ angular.module('app.cute', [])
       var count = ++$scope.counts[x];
       if (count > $scope.maxCount) {
         $scope.maxCount = count;
-        $scope.winner = label;
+        $scope.winner = label.title;
       }
       $scope.total++;
     }
