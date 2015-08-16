@@ -1,5 +1,6 @@
 
-  > Tinpurr: Finding your soulmate, via your inner-cat-lady 
+#Tinpurr 
+Finding your soulmate, via your inner-cat-lady 
 
   > Quench your thirst of cat lovin'. Vote on the cutest cat in town. (Future features: upload pics of your own cat and watch your cat's popularity grow)
 

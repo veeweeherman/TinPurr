@@ -17,26 +17,16 @@
   <body>
     <h1>Cats!! Cats!! Cats!! Cats!! Cats!!</h1>
 
-
     <div ng-controller="CuteCtrl">
-      <button class="btn btn-large btn-info" type="button" ng-click="getCats($event)">meow</button>
-      
+      <button class="btn btn-large btn-info" type="button" ng-click="getCats($event)">meow</button>     
       <div ng-repeat="img in random(urlArr) | limitTo:quantity" >
         <img  class="img-circle" ng-src="{{ img.url }}"  >
-        <!-- <p>{{img.title}}: {{counts[$index] || 0}}</p> -->
         <button class="btn btn-small btn-primary" type="button" ng-click="upVote($index,img,$event)">meow</button>
-      </div>
-      
-      <p>Total: {{ total }}</p>
-     
-      <p>
-        And the winner is {{ winner }} with {{ percent() }}% of the votes
-      </p>
-    
+      </div>    
+      <p>Total: {{ total }}</p> 
+      <p>And the winner is {{ winner }} with {{ percent() }}% of the votes</p>
     </div>
 
-
-  
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
