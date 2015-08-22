@@ -1,0 +1,31 @@
+{
+  "name": "tinpurr",
+  "version": "1.0.0",
+  "description": "The hot-or-not for cats",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veeweeherman/TinPurr.git"
+  },
+  "keywords": [
+    "API",
+    "flickr",
+    "angular",
+    "angularjs",
+    "node",
+    "express"
+  ],
+  "author": "Vy Cu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/veeweeherman/TinPurr/issues"
+  },
+  "homepage": "https://github.com/veeweeherman/TinPurr#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
