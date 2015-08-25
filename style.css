@@ -3,7 +3,13 @@
 	background-color: #ADC2EB;
 }
 */
-
+body {
+	text-align: center;
+	/*font-family: 'Poiret One', cursive;*/
+	font-family: 'Nunito', sans-serif;
+}
 img {
 	width: 40%;
+	max-height: 205px;
+	width: auto;
 }
