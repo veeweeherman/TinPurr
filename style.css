@@ -7,6 +7,20 @@ body {
 	text-align: center;
 	/*font-family: 'Poiret One', cursive;*/
 	font-family: 'Nunito', sans-serif;
+
+}
+h1 {
+	background-color: red;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	border-radius: 10px;
+}
+.underLayer {
+
+	background-color: blue;
+}
+.upperLayer {
+	background-color: green;
 }
 img {
 	width: 40%;
