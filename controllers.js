@@ -17,11 +17,11 @@ angular.module('app.cute', [])
     $scope.maxCount = 0;
 
     $scope.getCats = function() {
-      
+      // Yahoo Dev Network/Flickr API url
       $http.get("https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20flickr.photos.search%20where%20has_geo%3D'true'%20and%20tags%3D'funny%20cats'%20and%20api_key%3D'c4f57fcf22dcb4274f71bbacc7550f0c'%3B&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys")
         .success(function (data){
             console.log('this is flickr data :',data)
-            
+            // must concat URL strings together from the returned data object
             var photoArr = data.query.results.photo
             for (var i = 0; i < photoArr.length; i++) {
             var newObj = {};
@@ -42,7 +42,7 @@ angular.module('app.cute', [])
         console.log('ERROR: ', err);
       })
     }
-    $scope.getCats();
+    $scope.getCats(); // invokes the photo gathering on page rendering
     $scope.upVote = function(x, label, event){
       if (!$scope.counts.hasOwnProperty(x))
         $scope.counts[x] = 0;
@@ -53,7 +53,7 @@ angular.module('app.cute', [])
       }
       $scope.total++;
     }
-
+// calculates the the winning photo and by how much percentage of the votes the winner has
     $scope.percent = function() {
       if ($scope.maxCount === 0 || $scope.total === 0)
         return 0;
@@ -62,4 +62,4 @@ angular.module('app.cute', [])
     }
   })
 
-    
+// See https://gist.github.com/rctay/6260428 for a reference to the counting/averaging logic... thanks, Tay Ray!

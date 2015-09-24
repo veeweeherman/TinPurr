@@ -1,16 +1,3 @@
-// var express = require('express');
-// var app = express();
-// var path = require('path');
-// // app.get('/', function(req, res){
-// //   res.send('what the heccckkkk');
-// // });
-// app.get('/', function(req, res) {
-//     res.sendFile(path.join(__dirname + '/index.html'));
-// });
-// app.listen(3000);
-
-
-
 "use strict";
 
 var express = require('express');
@@ -31,6 +18,9 @@ app.use(function(req, res, next) {
   next();
 });
 
+//========================================================//
+//   render index.html by default                         //
+//========================================================//
 app.use(express.static(path.normalize(__dirname + '/')));
 
 app.get('/', function(req, res) {
