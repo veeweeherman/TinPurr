@@ -2,20 +2,20 @@ body {
 	text-align: center;
 	/*font-family: 'Poiret One', cursive;*/
 	font-family: 'Nunito', sans-serif; /* font applies to ENTIRE BODY */
-	background-color: yellow;
+	background-color: #FFCC80;
 }
 h1 {
-	background-color: red;
+	background-color: #FFF0B2; 	
 	padding-top: 50px;
 	padding-bottom: 50px;
 	border-radius: 10px;
 }
 .underLayer {
 
-	background-color: blue;
+	background-color: #FFFAE6; 
 }
 .upperLayer {
-	background-color: green;
+	background-color: #FFE0B2; 
 }
 img {
 	width: 40%;
